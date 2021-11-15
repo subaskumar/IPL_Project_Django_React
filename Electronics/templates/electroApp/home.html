@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+{% extends 'electroApp/base.html' %}
+{% load static %}
+{% block link_css%} <link rel="stylesheet" href="{% static 'css/home.css'%}"> {% endblock%}
+{% block title %}Online Electronics {% endblock %}
+    
+    <!-- slider start -->
+    {% block Product_nav %}
+        <nav class="product_nav">
+            <ul class="product-menu owl-carousel">
+                <li class="product-list">
+                    <a class="homer" href="{% url 'mobile' None %}">
+                        <div class="image">
+                            <img src="{% static 'image/productNav/iphone-x-space-gray.jpg' %}" alt="" style="transform: scale(0.8);">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Mobiles</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list">
+                    <a class="homer" href="#" >
+                        
+                        <div class="image">
+                            <img src="{% static 'image/productNav/69c6589653afdb9a.png' %}" alt="">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Laptops</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list ">
+                    <a class="homer" href="#">
+                        <div class="image">
+                            <img src="{% static 'image/productNav/362818-Product-0-I_73143cd7-053f-4a1b-948b-d12f3cf14430_large.jpg' %}" alt="" style="transform: scale(0.8);">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Audios</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list">
+                    <a class="homer" href="#">
+                        <div class="image">
+                            <img src="{% static 'image/productNav/01d8d431-9fcf-443d-b35a-ed8cba09c419_340x340.jpg' %}" alt="" style="transform: scale(0.9);">
+                        </div>
+                        <div class="catagory_name">
+                            <span > Smart TV</span>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="product-list">
+                    <a class="homer" href="#">
+                        <div class="image">
+                            <img src="{% static 'image/productNav/0ff199d1bd27eb98.png' %}" alt="" style="transform: scale(0.9);">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Appliances</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list">
+                    <a class="homer" href="#">
+                        <div class="image">
+                            <img src="{% static 'image/productNav/Drone.jpg' %}" alt="" style="transform: scale(1.6);">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Drones & Camera</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list">
+                    <a class="homer" href="#" >
+                        
+                        <div class="image">
+                            <img src="{% static 'image/productNav/69c6589653afdb9a.png' %}" alt="">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Watches</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list">
+                    <a class="homer" href="#" >
+                        
+                        <div class="image">
+                            <img src="{% static 'image/productNav/69c6589653afdb9a.png' %}" alt="">
+                        </div>
+                        <div class="catagory_name">
+                            <span >Vehicle Electronics</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-list ">
+                    <a class="homer" href="#">
+                        <div class="image">
+                            
+                            <i class="fal fa-charging-station" style="font-size: 40px; margin-top: 10px; color: palevioletred;"></i>
+                        </div>
+                        <div class="catagory_name">
+                            <span >Accesories</span>
+                        </div>
+                    </a>
+                </li>               
+            </ul>
+        </nav>
+    {% endblock %}
+
+    {% block slider%}
+
+    <div class="myslider">
+
+        <div class="slider">
+            <div class="slide_viewer">
+                <div class="slide_group">
+                    <div class="slide">
+                        <img src="{% static 'image/slider/4eb6150a86bec869.jpg' %}" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="{% static 'image/slider/site-slider-servicios.jpg' %}" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="{% static 'image/slider/center1_5_2.jpg' %}" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="{% static 'image/slider/bnr_vs120.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div><!-- End // .slider -->
+      
+      <!--<div class="slide_buttons"></div> -->
+        
+        <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                    <g>
+                        <g>
+                            <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                            c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+                            <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="next_btn" title="Next">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                    <g>
+                        <g>
+                            <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+                            <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- End // .directional_nav -->
+    <section>
+        <div class="container-fluid product-sec1 ">
+            <div class="heading-tittle">
+                <h3 class="font-italic" style="display: inline-block; margin-top: 5px; font-weight: 500; font-family: Roboto,Arial,sans-serif;;">
+                    Sale of the Day <span style="font-size: 15px; color: #219ff3;">(40% off)</span>
+                </h3>
+                <p id="demo" style="display: inline-block; margin-left: 35px; color: rgb(127, 127, 127); font-size: 16px;"> </p>
+                <a href="#" class="viewAll_btn">VIEW ALL</a>
+
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                {% for product in sale_product %}
+                    <div class="col-md-2 product-men mt-5">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <a href="#" style="text-decoration: none;">
+                                <div class="men-thumb-item text-center">
+                                    <img src="{{product.image.url}}" alt="">
+                                    <span class="product-new-top">SALE</span>
+
+                                </div>
+                            </a>
+
+                            <div class="item-info-product text-center border-top mt-4">
+                                    <h4 style="color: #878787; cursor: text;font-size: 14px; font-weight: 500; font-family: Roboto,Arial,sans-serif;">
+                                        {{product.brand}}
+                                    </h4>
+                                    <h4 class="" style="margin-top: -7px;">
+                                        <a href="single.html">{{product.title}}</a>
+                                    </h4>
+                                    <div class="info-product-price my-1">
+                                        <span class="item_price">{{product.selling_price}}</span>
+                                        <del>{{product.MRP}}</del>
+                                        <span style="font-size: 13px; color: #388e3c; font-weight: 600;">{{product.discount}}% off</span>
+                                    </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                {% endfor %}   
+            </div>
+        </div>
+        <!-- //first section -->
+    </section>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("sep 20, 2021 15:37:25").getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = "<i class='fas fa-clock' style='color: #f3bd0e;'></i>  "  + hours + " : " + minutes + " : " + seconds;
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+    
+    <section>
+        <div class="container-fluid product-sec1 ">
+            <div class="heading-tittle">
+                <h3 class="font-italic" style="display: inline-block; margin-top: 5px; font-weight: 500; font-family: Roboto,Arial,sans-serif;;">
+                    Best Battery Phones <span style="font-size: 15px; color: #219ff3;">(More than 4000 mAH)</span>
+                </h3>
+                <a href="#" class="viewAll_btn">VIEW ALL</a>
+
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                {% for product in sale_product %}
+                    <div class="col-md-2 product-men">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <a href="#" style="text-decoration: none;">
+                                <div class="men-thumb-item text-center">
+                                    <img src="{{product.image.url}}" alt="">
+                                </div>
+                            </a>
+
+                            <div class="item-info-product text-center border-top mt-4">
+                                    <h4 style="color: #878787; cursor: text;font-size: 14px; font-weight: 500; font-family: Roboto,Arial,sans-serif;">
+                                        {{product.brand}}
+                                    </h4>
+                                    <h4 class="" style="margin-top: -7px;">
+                                        <a href="single.html">{{product.title}}</a>
+                                    </h4>
+                                    <div class="info-product-price">
+                                        <span class="item_price">{{product.selling_price}}</span>
+                                        <del>{{product.MRP}}</del>
+                                        <span style="font-size: 13px; color: #388e3c; font-weight: 600;">{{product.discount}}% off</span>
+                                    </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                {% endfor %}   
+            </div>
+        </div>
+        <!-- //first section -->
+    </section>
+
+    <section>
+        <div class="container-fluid product-sec1 ">
+            <div class="heading-tittle">
+                <h3 class="font-italic" style="display: inline-block; margin-top: 5px; font-weight: 500; font-family: Roboto,Arial,sans-serif;;">
+                    Best of Appliances
+                </h3>
+                <a href="#" class="viewAll_btn">VIEW ALL</a>
+
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                {% for product in sale_product %}
+                    <div class="col-md-2 product-men mt-5">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <a href="#" style="text-decoration: none;">
+                                <div class="men-thumb-item text-center">
+                                    <img src="{{product.image.url}}" alt="">
+                                </div>
+                            </a>
+
+                            <div class="item-info-product text-center border-top mt-4">
+                                    <h4 style="color: #878787; cursor: text;font-size: 14px; font-weight: 500; font-family: Roboto,Arial,sans-serif;">
+                                        {{product.brand}}
+                                    </h4>
+                                    <h4 class="" style="margin-top: -7px;">
+                                        <a href="single.html">{{product.title}}</a>
+                                    </h4>
+                                    <div class="info-product-price my-1">
+                                        <span class="item_price">{{product.selling_price}}</span>
+                                        <del>{{product.MRP}}</del>
+                                        <span style="font-size: 13px; color: #388e3c; font-weight: 600;">{{product.discount}}% off</span>
+                                    </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                {% endfor %}   
+            </div>
+        </div>
+    <!-- //first section -->
+    </section>
+    <!-- Product Adverticse -->
+    <section id="Advertise_section">
+        <div  class="container-fluid" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
+            <div class="row Advertise_row">
+                <div class="Advertise_column">
+                    <img src="{% static 'image/phone_left.webp' %}" >
+                    <div class="Adv_text">
+                        <div class="" >
+                            <p class="" style="font-size:20px">
+                                <span class="color_11">Just In</span>
+                            </p>
+                        </div>
+                        <div  class="">
+                            <p class="" style="font-size:45px">
+                                <span class="color_11">Up to<br>30% off</span>
+                            </p>
+                        </div>
+                        <div class="" >
+                            <p class="font_7" style="font-size:20px">
+                                <span class="color_11">Selected Smartphone Brands&nbsp;</span>
+                            </p>
+                        </div>
+                        <div  class="btn">
+                            <a href="#" target="_self" class="_1fbEI">
+                                <span class="_1Qjd7">Shop</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="Advertise_column">
+                    <img src="{% static 'image/Headphone.webp' %}" alt="">
+                    <div class="Adv_text">
+
+                        <div class="" >
+                            <p class="" style="font-size:20px">
+                                <span >Holiday Deals</span>
+                            </p>
+                        </div>
+                        <div  class="">
+                            <p class="" style="font-size:45px">
+                                <span class="color_11">Take Your Sound<br>Anywhere</span>
+                            </p>
+                        </div>
+                        <div class="" >
+                            <p class="font_7" style="font-size:20px">
+                                <span class="color_11">Top Headphone Brands</span>
+                            </p>
+                        </div>
+                        <div  class="btn">
+                            <a data-testid="linkElement" href="/subasmk01.wixsite.com/my-site-3/mobile.html" target="_self" class="_1fbEI">
+                                <span class="_1Qjd7">Shop</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+                
+    </section>
+    <section>
+        <div class="container-fluid product-sec1 ">
+            <div class="heading-tittle">
+                <h3 class="font-italic" style="display: inline-block; margin-top: 5px; font-weight: 500; font-family: Roboto,Arial,sans-serif;;">
+                    Trending Offers
+                </h3>
+                <a href="#" class="viewAll_btn">VIEW ALL</a>
+
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                {% for product in sale_product %}
+                    <div class="col-md-2 product-men mt-5">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <a href="#" style="text-decoration: none;">
+                                <div class="men-thumb-item text-center">
+                                    <img src="{{product.image.url}}" alt="">
+                                </div>
+                            </a>
+
+                            <div class="item-info-product text-center border-top mt-4">
+                                    <h4 style="color: #878787; cursor: text;font-size: 14px; font-weight: 500; font-family: Roboto,Arial,sans-serif;">
+                                        {{product.brand}}
+                                    </h4>
+                                    <h4 class="" style="margin-top: -7px;">
+                                        <a href="single.html">{{product.title}}</a>
+                                    </h4>
+                                    <div class="info-product-price my-1">
+                                        <span class="item_price">{{product.selling_price}}</span>
+                                        <del>{{product.MRP}}</del>
+                                        <span style="font-size: 13px; color: #388e3c; font-weight: 600;">{{product.discount}}% off</span>
+                                    </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                {% endfor %}   
+            </div>
+        </div>
+        <!-- //first section -->
+    </section>
+    <section>
+        <div class="container-fluid product-sec1 ">
+            <div class="heading-tittle">
+                <h3 class="font-italic" style="display: inline-block; margin-top: 5px; font-weight: 500; font-family: Roboto,Arial,sans-serif;;">
+                    Best Sellers
+                </h3>
+                <a href="#" class="viewAll_btn">VIEW ALL</a>
+
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                {% for product in sale_product %}
+                    <div class="col-md-2 product-men mt-5">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <a href="#" style="text-decoration: none;">
+                                <div class="men-thumb-item text-center">
+                                    <img src="{{product.image.url}}" alt="">
+                                </div>
+                            </a>
+
+                            <div class="item-info-product text-center border-top mt-4">
+                                    <h4 style="color: #878787; cursor: text;font-size: 14px; font-weight: 500; font-family: Roboto,Arial,sans-serif;">
+                                        {{product.brand}}
+                                    </h4>
+                                    <h4 class="" style="margin-top: -7px;">
+                                        <a href="single.html">{{product.title}}</a>
+                                    </h4>
+                                    <div class="info-product-price my-1">
+                                        <span class="item_price">{{product.selling_price}}</span>
+                                        <del>{{product.MRP}}</del>
+                                        <span style="font-size: 13px; color: #388e3c; font-weight: 600;">{{product.discount}}% off</span>
+                                    </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                {% endfor %}   
+            </div>
+        </div>
+        <!-- //first section -->
+    </section>
+
+
+    {% endblock %}
+        <!-- slider End -->
+
+
+    {% block page_body %}
+            
+        
+    {% endblock %}

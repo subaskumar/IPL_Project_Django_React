@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'electroApp/base.html' %}
+
+    {% block link_css%} 
+    {% endblock%}
+
+    {% block title %} {% endblock %}
+
+
+    {% block page_body %}
+    <form action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="register">
+    </form>
+        
+    {% endblock %}

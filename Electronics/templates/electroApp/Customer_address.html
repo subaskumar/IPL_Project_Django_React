@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% extends 'electroApp/base.html' %}
+
+    {% block link_css%} 
+    
+    {% endblock%}
+
+    {% block title %} {% endblock %}
+    {% block Product_nav %}
+
+
+		{% include "electroApp/product_navBar.html" %}
+        
+    {% endblock %}
+
+
+    {% block page_body %}
+    {% load add_class_filter %}
+
+    <div class="container-fluid" >
+        <div class="row">
+          <div class="User_left_column">
+            <div class="Profile_header">
+              <div class="profile-picture big-profile-picture" style="display: inline-block;">
+                <img width="150px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg" >
+              </div>
+              <div class="profile_icon">
+                <ul>
+                  <li>
+                    <a href=""><i class="fal fa-bell"></i> <span style="background-color: rgb(233, 9, 9);">5</span></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fal fa-envelope-open"></i> <span class="bg-primary">2</span></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fal fa-heart"></i></a>
+                  </li>
+                </ul>                
+              </div>
+            </div> 
+            <div class="User_left_body">
+              <ul>
+                <li><a href="">
+                  <i class="fas fa-sort-amount-up" ></i> My Order </a> <i class="fal fa-long-arrow-alt-right right_arrow" style="	color: rgb(30, 81, 210);"></i>
+                </li>
+                <li><a href="{% url 'profile' user.id %}" >
+                  <i class="fas fa-user-alt"></i> My Profile</a><i class="fal fa-long-arrow-alt-right right_arrow" style="color: rgb(30, 81, 210);"></i>
+                </li>
+                <li><a href="{% url 'password_change' %}">
+                  <i class="fas fa-key"></i>Change Password</a><i class="fal fa-long-arrow-alt-right right_arrow" style="color: rgb(30, 81, 210);"></i>
+                </li>
+                <li><a href="">
+                  <i class="far fa-address-card"></i>Manage Address</a><i class="fal fa-long-arrow-alt-right right_arrow" style="color: rgb(30, 81, 210);"></i>
+                </li>
+                <li><a href="">
+                  <i class="fas fa-money-check-alt"> </i> Payments</a><i class="fal fa-long-arrow-alt-right right_arrow" style="color: rgb(30, 81, 210);"></i>
+                </li>
+                <li><a href="">
+                  <i class="far fa-sign-out"></i> Logout</a><i class="fal fa-long-arrow-alt-right right_arrow" style="color: rgb(30, 81, 210);"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="User_Right_column">
+            <div class="address" style="padding: 5px 100px;">
+              <h4 class="" style="font-size: 18px; 	font-family: Roboto,Arial,sans-serif; font-weight: 500;display: block; padding-bottom: 20px; color: #212121;;">Manage Addresses</h4>
+              <div class="add_new_address">
+                <div class="add_address_inner">
+                  <i class="far fa-plus" style="margin-right: 10px; font-size: 19px;"></i>
+                  ADD A NEW ADDRESS
+                </div>
+              </div>
+              {% for cust in customer%}
+              <div class="address_detail">
+                <div class="row address_detail_inner">
+                  <div class="col-lg-8" >
+                    <p class="address_type">HOME</p>
+                    <span style="margin-right: 13px;" >{{cust.name|title}}</span> <span>{{cust.alter_phone}}</span><br><br>
+                    <p> {{cust.locality}}, {{cust.city}}, {{cust.state}} - <span>{{cust.zipcode}}</span> </p>
+                  </div>
+                  <div class="col-lg-4 edit_delete" >
+                    <div style="width: 95px; float: right;" class="hover_icon">
+                      <i class="far fa-ellipsis-v"></i>
+                      <div class="edit_delete_link">
+                        <a href="" >Edit</a>
+                        <a href="" >Delete</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        
+    {% endblock %}
