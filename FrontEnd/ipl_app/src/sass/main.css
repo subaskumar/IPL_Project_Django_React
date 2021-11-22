@@ -1,0 +1,306 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.logo1{
+    color: rgb(212, 17, 131);
+    font-size: 30px;
+    margin-left: 30px;
+    margin-right: 7px;
+}
+.logoName{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+main {
+    margin: 16px;
+}
+
+.navbar {
+    display: flex;
+    padding-right: 50px;
+    align-items: center; 
+    background: rebeccapurple;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+
+}
+.navbar__title a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar__item {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+   
+}
+.navbar__item a{
+    cursor: pointer;
+    text-decoration: none;
+    color: burlywood;
+    font-size: 15px;
+}
+  
+  .card-grid-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px 80px;
+
+  }
+  
+  .card-body {
+    max-width: 15rem;
+    min-width: 15rem;
+    border-radius: 4px;
+    color: #fff; 
+    margin: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    background: #343a40;
+    box-shadow: 5px 5px 15px #000;
+
+
+  }
+  .card-body:hover {
+    box-shadow: 0 0 4em 0px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  .card-body:active {
+    transform: scale(1.01) translateY(0.2rem);
+  }
+  .card-body > .section img{
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+  }
+  
+  .card-body > .section {
+    max-height: 10.5rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+  }
+  .card-body > .section1 {
+    min-height: 6rem;
+    overflow: hidden;
+
+  }
+  
+  .card-body > .text-wrapper {
+    padding: 0.8em;
+    font-family: 'Lato';
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 4px 4px;
+    justify-content: left;
+    text-align: left;
+  }
+  
+  .text-wrapper > .title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    color: crimson;
+  }
+  .text-wrapper > .details {
+    font-size: 0.8em;
+    line-height: 2em;
+    color: #1e508b;
+  }
+  
+
+  /* Form Style */
+
+form {
+  padding: 2rem 3rem;
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 27.75rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 3.236rem;
+  text-align: center;
+  font-size: 1.618rem;
+}
+
+.form-group {
+  padding: 0;
+  border: 0;
+}
+.form-group + .form-group {
+  margin-top: 1rem;
+}
+
+label {
+  margin-bottom: .3rem;
+  font-size: .85rem;
+  float: left;
+ 
+}
+
+input {
+  display: block;
+  padding: .5rem .75rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  border-left: 0;
+  border-radius: 3px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+input[type=file]{
+  border: none;
+}
+#formPlayStatus{
+  float: left;
+  width: 5%;
+}
+.form-group select{
+  float: right;
+  width: 30%;
+}
+input[type=number]:focus,
+input[type=text]:focus{
+  outline: 0;
+  border-bottom-color: #ffab00;
+}
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  margin-top: 1.618rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #ffab00;
+  border: 1px solid transparent;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+.btn:focus, .btn:hover {
+  background-color: #ffc142;
+  box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+.btn:focus {
+  outline: 0;
+}
+.teamdetails{
+  text-decoration: none;
+}
+.TeamProfile {
+  width: 60%;
+  padding: 20px 50px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+.innerProfile{
+  display: flex;
+  padding: 20px 30px;
+}
+
+.TeamProfile .profile-image{
+  width: 30%;
+  height: 20%;
+  border-radius: 60px 60px;
+  overflow: hidden;
+}
+.TeamProfile img{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  transform: scale(1.1);
+
+}
+.teaminfo{
+  width: 60%;
+  margin-left: 70px;
+  text-align: left;
+}
+.teaminfo h2{
+  color: #1e508b;
+  font-size: 22px;
+}
+.teaminfo b{
+  color: #f17a09;
+  margin-left: 20px;
+}
+.profile-image-player{
+  width: 100%;
+}
+.batsmanDiv{
+  width: 47%;
+  border-right: 1px solid rgb(189, 187, 187);
+}
+.bowlerDiv{
+  width: 47%;
+}
+.profileinner-player{
+  display: flex;
+
+
+}
+teamPlayers{
+  padding: 5px 10px;
+
+
+}
+.Playercard-body {
+  width: 30%;
+  height: 30%;
+  border-radius: 70px 70px;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+.Playercard-body img{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  transform: scale(1.1);
+
+}
+.outrPlayer{
+  display: flex;
+  line-height: 1px;
+  border-bottom: 1px solid black;
+}
+.outrPlayer span{
+  line-height: 20px;
+  display: block;
+}
