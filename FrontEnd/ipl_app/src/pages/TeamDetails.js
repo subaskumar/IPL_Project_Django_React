@@ -26,7 +26,7 @@ function Card(props){
   }
 
 const TeamDetails = () => {
-    const { id }: { id : string} = useParams();
+    const { id } = useParams();
     console.log(id)
 
     const [Pdatas,setData] = useState([])
