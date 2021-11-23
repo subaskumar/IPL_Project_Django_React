@@ -13,7 +13,8 @@ urlpatterns = [
     path('player/<int:id>/', views.Player_API.as_view()),
     # path('Ipl_Team_list/<int:id>/', views.IPLTeamList_API.as_view()),
     # path('Ipl_Team_list/', views.IPLTeamList_API.as_view()),
-    path('addPlayer/', views.Addplayer_view)
+    path('addPlayer/', views.Addplayer_view),
+    path('search/', views.searchPlayer),
 
 ]
 if settings.DEBUG:
