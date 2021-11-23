@@ -77,3 +77,11 @@ def Addplayer_view(request):
                     'message': 'successfully'
                 }
         return JsonResponse(data,safe=False)
+    
+@csrf_exempt  
+def searchPlayer(request):
+    if request.method =="POST":
+        team = request.POST.get('teamName')
+        players = Player.objects.filter(team = team)
+        serializer_player = PlayerSerializer(players,many=True)     
+        return JsonResponse(serializer_player.data,safe=False)
